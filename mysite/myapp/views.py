@@ -1,5 +1,4 @@
 import os
-import status
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -14,7 +13,7 @@ def getBucketPath(request):
 @api_view(["POST"])
 def uploadFile(request):
 
-    uploaded_file = request.FILES.get('file')
+    uploaded_file = request.FILES['myFile']
 
     if uploaded_file:
 
